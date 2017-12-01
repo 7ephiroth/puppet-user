@@ -1,0 +1,10 @@
+// La zone primaire univ-perp.fr
+zone "univ-perp.fr" {
+  type master;
+  file "/var/cache/bind/db.univ-perp.fr";
+};
+// La zone inverse
+zone "0.0.10.in-addr.arpa" {
+  type master;
+  file "/var/cache/bind/rev.univ-perp.fr";
+};
