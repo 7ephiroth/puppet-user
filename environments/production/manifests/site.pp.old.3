@@ -1,0 +1,27 @@
+node default { }
+
+#node 'puppetclient' {
+#include usercreate
+#}
+
+#node 'puppetclient' {
+#$param1 = 'univ-perp.fr'
+#$dns1 = '10.0.0.82'
+#include bind
+#}
+
+#node 'puppetclient' {
+#$param1 = 'univ-perp.fr'
+#$dns1 = '10.0.0.82'
+#$hostname = 'puppetclient'
+#$ipadress = '10.0.0.82'
+#include network
+#}
+
+node 'puppetnodes' {
+$param1 = 'univ-perp.fr'
+$dns1 = '10.0.0.82'
+$hostname = 'puppetnodes'
+$ipadress = '10.0.0.83'
+include network
+}
