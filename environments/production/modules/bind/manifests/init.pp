@@ -24,7 +24,7 @@ class bind::config {
           mode => '0644',
           owner => 'root',
           group => 'bind',
-          source => "file:/etc/puppetlabs/code/environments/production/modules/bind/files/named.conf.local",
+          source => "puppet:///modules/bind/named.conf.local",
           require=> Class["bind::installed"],
           }
 
@@ -33,7 +33,7 @@ class bind::config {
           mode => '0644',
           owner => 'root',
           group => 'bind',
-          source => "file:/etc/puppetlabs/code/environments/production/modules/bind/files/named.conf.options",
+          source => "puppet:///modules/bind/named.conf.options",
           require=> Class["bind::installed"],
           }
 
@@ -42,7 +42,7 @@ class bind::config {
           mode => '0644',
           owner => 'root',
           group => 'bind',
-          source => "file:/etc/puppetlabs/code/environments/production/modules/bind/files/db.univ-perp.fr",
+          source => "puppet:///modules/bind/db.univ-perp.fr",
           require=> Class["bind::installed"],
           }
 
@@ -51,7 +51,7 @@ class bind::config {
           mode => '0644',
           owner => 'root',
           group => 'bind',
-          source => "file:/etc/puppetlabs/code/environments/production/modules/bind/files/rev.univ-perp.fr",
+          source => "puppet:///modules/bind/rev.univ-perp.fr",
           require=> Class["bind::installed"],
           }
 
